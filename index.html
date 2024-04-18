@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万象工作室</title>
+    <link rel="icon" href="static/logo/logo1.png" type="image/x-icon"> <!-- 使用.ico格式的图标文件 -->
+    <link href="./static/global.css" rel="stylesheet" />
+    <link href="./static/index.css" rel="stylesheet" />
+    <!-- 引入样式 -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+<!-- 引入组件库 -->
+<!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- PC顶部菜单 -->
+        <div class="top-nav desktop-menu">
+            <div class="contianer">
+                <img src="static/logo/logo3.png" class="logo">
+                <div class="comtext">
+                    <ul class="top-list">
+                        <li v-for="item in datalist" :key="item.id"><a :href="item.url">{{item.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 主页内容 -->
+        <div class="main">
+            <ul class="list-ul">
+                <li class="box">
+                    <div class="container">
+                        <div class="container-left-box1">
+                            <div class="conetext">
+                                <div class="title">万象工作室</div>
+                                <p class="title-msg">万象工作室是一个独立的组织，于2024年成立，
+                                    但该工作室致力于提供网站开发和设计等服务。
+                                    它的成立旨在为客户提供高质量的网站解决方案，
+                                    并且作为一个独立团体。</p>
+                                    <div class="my-btn">
+                                        <div class="btn-about"><a  class="btn-b" href="./layout/about.html">关于</a></div>
+                                        <div class="btn-contact"><a  class="btn-a" href="./layout/contact.html">联系我们</a></div>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="container-right-box1">
+                            <img src="./static/pic/box1.png">
+                        </div>
+                    </div>
+                </li>
+                <li class="box">
+                    <div class="container">
+      
+                        <div class="container-right-box2">
+                            <img src="./static/pic/box2.png">
+                        </div>
+                        <div class="container-left-box2">
+                            <div class="conetext">
+                                <div class="title">期待着你的加入</div>
+                                <p class="title-msg">一个大家庭，一群来自五湖四海，
+                                    性格迥异的人，虽然年龄，专业不尽相同，但一样的是那颗青春奋斗的心，坚持，奋斗，提升，传承的精神镌刻在每一个成员的心中，
+                                    我们期待每一个志同道合的“你”的加入。</p>
+                                    <div class="my-btn">
+                                        <div class="btn-contact"><a class="btn-a" href="./layout/contact.html">联系我们</a></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 引入 Vue.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script>
+        // 创建 Vue 实例
+        new Vue({
+            el: '#app',
+            data: {
+                datalist: [
+                    { id: 1, name: '首页', url: '' },
+                    { id: 2, name: '返现', url: './layout/award.html' },
+                    { id: 3, name: '合作', url: './layout/contact.html' },
+                    { id: 4, name: '关于', url: './layout/about.html' }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

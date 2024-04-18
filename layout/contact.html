@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>万象工作室</title>
+    <link rel="icon" href="../static/logo/logo3.png" type="image/x-icon"> <!-- 使用.ico格式的图标文件 -->
+    <link href="../static/logo/logo1.png" rel="stylesheet" />
+    <link href="../static/global.css" rel="stylesheet" />
+    <link href="../static/index.css" rel="stylesheet" />
+    <link href="../static/layout/contact.css" rel="stylesheet" />
+    <!-- 引入样式 -->
+<!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+<!-- 引入组件库 -->
+<!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <!-- PC顶部菜单 -->
+        <div class="top-nav desktop-menu">
+            <div class="contianer">
+                <img src="../static/logo/logo3.png" class="logo">
+                <div class="comtext">
+                    <ul class="top-list">
+                        <li v-for="item in datalist" :key="item.id"><a :href="item.url">{{item.name}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="wrap-main">
+            <div class="wrap-container">
+                <div class="wrap-title">
+                    联系我们</div>
+                <div class="wrap-context">
+                    <div class="msg1">
+                        <p>QQ:1902323313</p>
+                        <p>e-mail: 1902323313@qq.com</p>
+                        <p>QQ:2449121473</p>
+                        <p>e-mail: 2449121473@qq.com</p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+    <!-- 引入 Vue.js -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script>
+        // 创建 Vue 实例
+        new Vue({
+            el: '#app',
+            data: {
+                datalist: [
+                    { id: 1, name: '首页', url: '../index.html' },
+                    { id: 2, name: '返现', url: './award.html' },
+                    { id: 3, name: '合作', url: './contact.html' },
+                    { id: 4, name: '关于', url: './about.html' }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
